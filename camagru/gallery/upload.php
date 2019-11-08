@@ -110,27 +110,36 @@
                     </div>
                     <div class="row">
                          <!-- Grab stream from camera -->
+                         <img alt="overlay image" id="overlay" width="100" height="100" style="position: absolute;">
                          <video id="video" width="400" height="300"></video>
                     </div>
                     <div class="row">
                         <button id="capture">Take Image</button>
                     </div>
                     <div class="row">
+                        <canvas id="canvasOverlay" width="100" height="100" style="position: absolute;"></canvas>
                         <canvas id="canvas" width="400" height="300"></canvas>
                     </div>
-                    <div class="row" >
-                        <button>Save Image</button>
+                    <div class="row">
+                        <button id="save">Save Image</button>
                     </div>
                 </div>
                 <div class="col">
                     <!-- Overlays -->
                     <div class="row">
+                        <img src="../resources/images/overlays/FCB.png" alt="overlay Barcelona" id="Barcelona" width="100" height="100">
                     </div>
                     <div class="row">
+                        <img src="../resources/images/overlays/sticker1.png" alt="overlay Sricker" id="Sticker" width="100" height="100">
                     </div>
                     <div class="row">
+                        <img src="../resources/images/overlays/LIV.png" alt="overlay Liverpool" id="Liverpool" width="100" height="100">
                     </div>
                     <div class="row">
+                        <img src="../resources/images/overlays/MCF.png" alt="overlay Man City" id="City" width="100" height="100">
+                    </div>
+                    <div class="row">
+                        <img src="../resources/images/overlays/RMA.png" alt="overlay Real Madrid" id="Madrid" width="100" height="100">
                     </div>
                 </div>
             </div>

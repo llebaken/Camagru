@@ -7,6 +7,7 @@
         $form_errors = array();
         $form_errors = array_merge($form_errors, cheack_password($_POST));
         if(empty($form_errors)){
+            $password = $_POST['password'];
             if(isset($email)){
                 try{
                     $query = "SELECT * FROM users WHERE email = :email";

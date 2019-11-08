@@ -45,4 +45,35 @@
     }catch(PDOException $ex) {
         echo $sql . "<br>" . $ex->getMessage();
     }
+
+    try{
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $USER, $PASS);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "USE CAMAGRU";
+        $sql = "CREATE TABLE IF NOT EXISTS likes ( 
+        id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+        userid VARCHAR(30) NOT NULL, 
+        imageid INT(11) NOT NULL)";
+        $conn->exec($sql);
+        echo "likes table created<br>";
+    }
+    catch(PDOException $ex) {
+        echo $sql . "<br>" . $ex->getMessage();
+    }
+
+    try{
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $USER, $PASS);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "USE CAMAGRU";
+        $sql = "CREATE TABLE IF NOT EXISTS comments ( 
+        id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+        userid VARCHAR(30) NOT NULL,
+        imageid INT(11) NOT NULL, 
+        comment VARCHAR(200) NOT NULL)";
+        $conn->exec($sql);
+        echo "comments table created<br>";
+    }
+    catch(PDOException $ex) {
+        echo $sql . "<br>" . $ex->getMessage();
+    }
 ?>
